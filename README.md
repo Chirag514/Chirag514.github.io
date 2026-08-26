@@ -8,15 +8,14 @@ My personal portfolio website built with HTML, CSS, and JavaScript.
 
 ## About
 
-A clean, responsive portfolio showcasing my projects, research experience, and skills as a B.Tech student at IIT Jodhpur (Materials Engineering + Minor in AI).
+A clean, responsive portfolio showcasing my projects, experience, and skills as a B.Tech student at IIT Jodhpur (Materials Engineering + Minor in AI).
 
 ## Sections
 
 - Education
-- Research (FADE Lab, IIT Jodhpur)
+- Experience
 - Projects
 - Skills & Stack
-- Achievements
 - Contact
 
 ## Tech
