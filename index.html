@@ -455,6 +455,12 @@
     line-height: 1.3;
     flex: 1;
   }
+  .proj-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
   .proj-arrow {
     color: var(--blue);
     font-size: 0.85rem;
@@ -846,11 +852,11 @@
         <div class="exp-role">Fairness and Data Efficiency (FADE) Lab</div>
         <div class="exp-sub">IIT Jodhpur &nbsp;·&nbsp; Undergraduate Researcher &nbsp;·&nbsp; Work Submitted to <em>WACV 2027 (Core A)</em></div>
       </div>
-      <div class="exp-date">Jan 2026 – Present</div>
+      <div class="exp-date">Jan 2026 – Aug 2026</div>
     </div>
     <ul class="bullet-list">
       <li>Investigating bias mitigation in large pretrained vision-language models (CLIP, SigLIP, DINOv3) under a bias-unaware setting, where multiple biases can coexist and are unknown during debiasing.</li>
-      <li>Developed a feature-space debiasing approach for pretrained representations and evaluated downstream image classification and generation across multiple biased datasets.</li>
+      <li>Developed a feature-space debiasing approach for pretrained representations and evaluated downstream image classification across multiple biased datasets.</li>
       <li>Achieved up to <strong style="color:var(--gold);">+11.9% overall accuracy</strong> and <strong style="color:var(--gold);">+25.8% worst-group accuracy</strong> over competing state-of-the-art methods.</li>
     </ul>
   </div>
@@ -899,7 +905,7 @@
   <ul class="proj-bullets">
     <li>Built a bilingual (English/Hindi) real-time voice-scam detection engine fusing acoustic spoof detection (AASIST-L), semantic intent classification (MiniLM), and STT, achieving 94.3% English F1 and 75.0% Hindi F1.</li>
     <li>Architected a stateful Agentic Supervisor for conversational state management and multi-turn risk escalation, running 18× faster than real-time (RTF 0.056, 261.6 ms P99 latency).</li>
-    <li>Exported models to ONNX Runtime and reduced speech-model size ~75% via INT8 quantization, optimizing inference to a ~679 MB footprint.</li>
+    <li>Quantized MiniLM and AASIST-L via ONNX Runtime INT8 (~75% size reduction) and integrated pre-quantized Kroko-128L and IndicConformer models, achieving a ~358 MB on-device footprint.</li>
     <li>Containerized services with Docker and deployed a FastAPI backend on Render.</li>
   </ul>
 </div>
@@ -924,8 +930,8 @@
     <span class="tool-tag">LangSmith</span>
   </div>
   <ul class="proj-bullets">
-    <li>Built a multi-user RAG assistant with PDF upload, context-aware Q&A, page-level citations, auto paper analysis, PDF viewer, and 4 research tools using all-MiniLM-L6-v2 embeddings across 6 switchable LLMs.</li>
-    <li>Engineered a 6-model, 2-provider fallback chain, reducing auto-analysis failure rate from 74% → ~0% across 1,155 runs.</li>
+    <li>Built a multi-user RAG assistant with semantic search over uploaded papers: PDF upload, context-aware Q&A, page-level citations, auto paper analysis, PDF viewer, and 4 research tools using all-MiniLM-L6-v2 embeddings across 6 switchable LLMs.</li>
+    <li>Built a 6-model, 2-provider fallback chain, cutting rate-limit failures from 74% → ~0%.</li>
     <li>Achieved ~1.32s P50 latency via MMR-based Pinecone retrieval and streaming, with multi-user isolation using Supabase RLS and per-user Pinecone namespaces.</li>
   </ul>
 </div>
@@ -949,7 +955,7 @@
   </div>
   <ul class="proj-bullets">
     <li>Built and deployed MediScan-AI (Streamlit Cloud), combining fine-tuned SegFormer-b2 models exported to ONNX for CPU inference across 3 scan types with a 7-LLM fallback chain (Gemini → Groq → local LLM) for structured reports.</li>
-    <li>Achieved segmentation Dice scores of 0.96 (chest X-ray), 0.92 (skin lesion), 0.82 (breast ultrasound).</li>
+    <li>Achieved segmentation Dice scores of 0.96 (chest X-ray), 0.90 (skin lesion), 0.84 (breast ultrasound).</li>
   </ul>
 </div>
 
@@ -995,7 +1001,10 @@
       <div class="proj-num">06</div>
       <div class="proj-header">
         <div class="proj-title">RBI Digital Payments Data Analysis (2016–2024)</div>
-        <a href="https://github.com/Chirag514/RBI_Data_Analysis_2016-2024" target="_blank" class="proj-arrow" title="GitHub">↗ GitHub</a>
+        <div class="proj-links">
+          <a href="https://github.com/Chirag514/RBI_Data_Analysis_2016-2024" target="_blank" class="proj-arrow" title="GitHub">↗ GitHub</a>
+          <a href="https://github.com/Chirag514/RBI_Data_Analysis_2016-2024/blob/main/RBI_Transactions_Analysis.pdf" target="_blank" class="proj-arrow" title="Dashboard">↗ Dashboard</a>
+        </div>
       </div>
       <div class="proj-tools">
         <span class="tool-tag">Power BI</span>
@@ -1048,13 +1057,14 @@
         <span class="skill-tag">PyTorch</span>
         <span class="skill-tag">TensorFlow</span>
         <span class="skill-tag">Scikit-learn</span>
+        <span class="skill-tag">XGBoost</span>
         <span class="skill-tag">Hugging Face</span>
         <span class="skill-tag">SegFormer</span>
         <span class="skill-tag">ONNX Runtime</span>
       </div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-label">GenAI & Agentic AI</div>
+      <div class="skill-group-label">GenAI, LLMs & Retrieval</div>
       <div class="skill-tags">
         <span class="skill-tag">LangChain</span>
         <span class="skill-tag">LangGraph</span>
@@ -1062,18 +1072,18 @@
         <span class="skill-tag">LLM APIs</span>
         <span class="skill-tag">Model Context Protocol (MCP)</span>
         <span class="skill-tag">LangSmith</span>
+        <span class="skill-tag">Pinecone</span>
+        <span class="skill-tag">ChromaDB</span>
       </div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-label">Backend, Cloud & Databases</div>
+      <div class="skill-group-label">Backend & Cloud</div>
       <div class="skill-tags">
         <span class="skill-tag">FastAPI</span>
         <span class="skill-tag">Streamlit</span>
         <span class="skill-tag">Docker</span>
         <span class="skill-tag">Render</span>
         <span class="skill-tag">Supabase</span>
-        <span class="skill-tag">Pinecone</span>
-        <span class="skill-tag">ChromaDB</span>
         <span class="skill-tag">Git / GitHub</span>
       </div>
     </div>
@@ -1083,6 +1093,8 @@
         <span class="skill-tag">Pandas</span>
         <span class="skill-tag">NumPy</span>
         <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Excel</span>
       </div>
     </div>
   </div>
@@ -1098,7 +1110,7 @@
     <div class="course-list">
       <span class="course-tag">Deep Learning (A-)</span>
       <span class="course-tag">Introduction to Machine Learning (A-)</span>
-      <a href="https://www.coursera.org/account/accomplishments/specialization/UJ8JS572QIGJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n" target="_blank" class="course-tag coursera">Deep Learning Specialization(Coursera)</a>
+      <a href="https://www.coursera.org/account/accomplishments/specialization/UJ8JS572QIGJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n" target="_blank" class="course-tag coursera">Deep Learning Specialization (Coursera)</a>
       <span class="course-tag">Data Structures and Algorithms (A)</span>
       <span class="course-tag">Introduction to Computer Science</span>
       <span class="course-tag">Linear Algebra</span>
@@ -1129,7 +1141,7 @@
   <div class="section-label" style="justify-content:center; display:flex;">07 &nbsp; Contact</div>
   <h2 class="section-title" style="display:block; text-align:center;">Get In Touch</h2>
   <div class="contact-inner" style="margin: 0 auto;">
-    <p>Currently pursuing B.Tech at IIT Jodhpur and actively working on AI fairness research. Open to internships, collaborations, and interesting projects.</p>
+    <p>Currently pursuing B.Tech at IIT Jodhpur, with research experience in AI fairness. Open to internships, collaborations, and interesting projects.</p>
     <div class="contact-links">
       <a href="mailto:b23mt1012@iitj.ac.in" class="contact-link">✉ Email</a>
       <a href="https://github.com/Chirag514" class="contact-link" target="_blank">⌥ GitHub</a>
